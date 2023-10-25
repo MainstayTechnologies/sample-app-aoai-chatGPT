@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect, useContext, useLayoutEffect } from "react";
 import { CommandBarButton, IconButton, Dialog, DialogType, Stack } from "@fluentui/react";
 import { DismissRegular, SquareRegular, ShieldLockRegular, ErrorCircleRegular } from "@fluentui/react-icons";
+import { Link } from "react-router-dom";
 
 import ReactMarkdown from "react-markdown";
 import remarkGfm from 'remark-gfm'
@@ -8,7 +9,7 @@ import rehypeRaw from "rehype-raw";
 import uuid from 'react-uuid';
 
 import styles from "./Chat.module.css";
-import Azure from "../../assets/Azure.svg";
+import Mstech from "../../assets/Mstech.svg";
 
 import {
     ChatMessage,
@@ -540,12 +541,12 @@ const Chat = () => {
                         {!messages || messages.length < 1 ? (
                             <Stack className={styles.chatEmptyState}>
                                 <img
-                                    src={Azure}
+                                    src={Mstech}
                                     className={styles.chatIcon}
                                     aria-hidden="true"
                                 />
                                 <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions</h2>
+                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions. Be cognizant of hallucinations and always review and test code before running.</h2> <p className={styles.chatEmptyStateSubtitle}>If you encounter any issues please email:<Link to="mailto:ai@mstech.com">ai@mstech.com</Link></p>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
