@@ -546,7 +546,7 @@ const Chat = () => {
                                     aria-hidden="true"
                                 />
                                 <h1 className={styles.chatEmptyStateTitle}>Start chatting</h1>
-                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions. Be cognizant of hallucinations and always review and test code before running.</h2> <p className={styles.chatEmptyStateSubtitle}>If you encounter any issues please email:<Link to="mailto:ai@mstech.com">ai@mstech.com</Link></p>
+                                <h2 className={styles.chatEmptyStateSubtitle}>This chatbot is configured to answer your questions. Be cognizant of hallucinations. Always review and test code before running.</h2> <p className={styles.chatEmptyStateSubtitle}>If you encounter any issues please email:<Link to="mailto:ai@mstech.com">ai@mstech.com</Link></p>
                             </Stack>
                         ) : (
                             <div className={styles.chatMessageStream} style={{ marginBottom: isLoading ? "40px" : "0px"}} role="log">
